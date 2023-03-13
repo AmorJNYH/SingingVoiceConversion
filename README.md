@@ -11,5 +11,20 @@ For the Group 2 data set, we want to choose songs with large vocal ranges. In or
 
 ![Table III](Images/Table3.png)
 
-## Baseline: MelGAN
-## Flow-based Model
+## Parallel Data
+### Idea: DNN
+
+Structure of audio file:
++ wav
+  + singer name 1
+    + song name 1
+    + song name 2
+  + singer name 2
+    + song name 1
+    + song name 2
+    + ...
+  + ...
+
+## Unparallel Data
+### Baseline: MelGAN
+### Flow-based Model
