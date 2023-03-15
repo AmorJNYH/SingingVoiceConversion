@@ -21,9 +21,11 @@ class DNNmodel(nn.Module):
     def forward(self, _x):
         x, _ = self.lstm(_x) # _x is input, size(seq_len, batch, input_size)
         s, b, h = x.shape # x is output, size(seq_len, batch, hidden_size)
-        x = x.view(s*b, h)
+        # x = x.view(s*b, h)
+        x = x.reshape(s*b, h)
         x = self.linear(x)
-        x = x.view(s, b, -1)
+        # x = x.view(s, b, -1)
+        x = x.reshape(s, b, -1)
         return x
 
 if __name__ == "__main__":
